@@ -4,13 +4,7 @@ const {select_delegations,select_clients,insert_client,delete_client,edit_client
 const router = express.Router();
 const autocatch = require('./autocatch');
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'practiceSql',
-  password: 'klosek79',
-  port: 5430,
-});
+const pool = new Pool();
 
 router.get('/delegations', autocatch(async(req,res)=>{
     const result = await pool.query(select_delegations);
