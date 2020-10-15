@@ -13,6 +13,9 @@ app.use(function(req, res, next) {
 
 app.use(express.json());
 app.use('/api',crud);
+app.get('/',()=>{
+    res.send('Heroku app started');
+})
 app.use(err=>{
     console.log('Server error');
 })
