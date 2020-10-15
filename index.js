@@ -20,7 +20,7 @@ app.use(err=>{
     console.log('Server error');
 })
 
-app.listen(4100,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Open");
 });
 
