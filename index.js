@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
 
 app.use(express.json());
 app.use('/api',crud);
-app.get('/',()=>{
+app.get('/',(req,res)=>{
     res.send('Heroku app started');
 })
 app.use(err=>{
