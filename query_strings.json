@@ -2,6 +2,6 @@
     "select_delegations":"SELECT * FROM delegacje",
     "select_clients":"SELECT * FROM klienci",
     "insert_client":"INSERT INTO klienci(nip,regon,nazwa,vat_status,ulica,nr_domu,nr_mieszkania) VALUES ($1,$2,$3,$4,$5,$6,$7)",
-    "delete_client":"UPDATE klienci SET deletion_mark = 1 WHERE id = $1",
+    "delete_client":"UPDATE klienci SET deletion_mark = true WHERE id = $1",
     "edit_client":"UPDATE klienci SET nip=$1,regon=$2,nazwa=$3,vat_status=$4,ulica=$5,nr_domu=$6,nr_mieszkania=$7 WHERE id = $8"
 }
